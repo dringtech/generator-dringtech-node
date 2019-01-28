@@ -1,6 +1,5 @@
-const gitignoreLines = require('./gitignore');
-
 const Generator = require('yeoman-generator');
+const gitignoreLines = require('./gitignore');
 
 module.exports = class extends Generator {
   setupGitignore() {
@@ -9,9 +8,11 @@ module.exports = class extends Generator {
     if (this.fs.exists(file)) {
       gitignore = this.fs.read(file).split(/\s+/);
     }
-    gitignoreLines.forEach(_ => {
-      if (!gitignore.includes(_)) gitignore.push(_);
+    gitignoreLines.forEach((_) => {
+      if (!gitignore.includes(_)) {
+        gitignore.push(_);
+      }
     });
-    this.fs.write(file, gitignore.join('\n') + '\n');
+    this.fs.write(file, `${gitignore.join('\n')}\n`);
   }
 };

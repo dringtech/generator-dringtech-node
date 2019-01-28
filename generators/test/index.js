@@ -20,7 +20,7 @@ module.exports = class extends Generator {
       'test/reporter-config.json',
       'test/helpers/mochaSetup.js',
     ];
-    files.forEach(file => {
+    files.forEach((file) => {
       this.fs.copyTpl(
         this.templatePath(file),
         this.destinationPath(file),
