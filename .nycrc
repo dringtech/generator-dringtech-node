@@ -8,9 +8,8 @@
     "coverage/",
     "node_modules/",
     "test/",
-    "gulpfile.js",
-    "public/javascript/",
-    "config/"
+    "config/",
+    "generators/*/templates/"
   ],
   "reporter": [
     "lcov",

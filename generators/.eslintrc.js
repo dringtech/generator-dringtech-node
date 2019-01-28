@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      files: 'mochaSetup.js',
+      files: '**/templates/**/*.js',
       rules: {
         'no-undef': 'off'
       }
