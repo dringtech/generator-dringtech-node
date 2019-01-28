@@ -1,0 +1,6 @@
+--require test/helpers/mochaSetup.js
+test/**/spec*.js
+--reporter mocha-multi-reporters
+--reporter-options configFile=test/reporter-config.json
+--bail
+--exit
