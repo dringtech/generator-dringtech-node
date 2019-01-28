@@ -1,6 +1,6 @@
 describe('gitignore submodule', function () {
   const { writeFile } = require('fs');
-  const { runGenerator } = require('../helpers');
+  const { assert, runGenerator } = require('../helpers');
 
   let entryCwd;
 
@@ -14,7 +14,7 @@ describe('gitignore submodule', function () {
 
   it('should create a .gitignore file if one does not exist', function () {
     return runGenerator('gitignore')
-      .then(async function () {
+      .then(() => {
         assert.file('.gitignore');
       });
   });
@@ -31,7 +31,7 @@ describe('gitignore submodule', function () {
 
   it('should append the requested items', function () {
     return runGenerator('gitignore')
-      .then(async function () {
+      .then(() => {
         assert.fileContent([
           ['.gitignore', '/node_modules/'],
           ['.gitignore', '/output/'],
@@ -46,7 +46,7 @@ describe('gitignore submodule', function () {
       .inTmpDir(async () => {
         await writeFile('.gitignore', '/node_modules/\n\n', () => {});
       })
-      .then(async () => {
+      .then(() => {
         assert.noFileContent('.gitignore', /(\/node_modules\/[.\n]*?){2}/m);
       });
   });

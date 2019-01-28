@@ -1,6 +1,5 @@
 describe('test subgenerator', function () {
-  const path = require('path');
-  const generator = path.join(__dirname, '../../generators/test');
+  const { assert, runGenerator } = require('../helpers');
 
   let entryCwd;
 
@@ -21,7 +20,7 @@ describe('test subgenerator', function () {
 
   files.forEach((file) => {
     it(`should create ${file}`, function () {
-      return runGenerator(generator)
+      return runGenerator('test')
         .then(() => {
           assert.file(file);
         });

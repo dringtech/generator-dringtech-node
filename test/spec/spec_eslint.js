@@ -1,6 +1,5 @@
 describe('eslint subgenerator', function () {
-  const path = require('path');
-  const generator = path.join(__dirname, '../../generators/eslint');
+  const { assert, runGenerator } = require('../helpers');
   let entryCwd;
 
   before(function () {
@@ -17,10 +16,10 @@ describe('eslint subgenerator', function () {
     'test/.eslintrc.js',
   ];
 
-  files.forEach(file => {
+  files.forEach((file) => {
     it(`should create ${file}`, function () {
-      return runGenerator(generator)
-        .then(_ => assert.file(file));
+      return runGenerator('eslint')
+        .then(() => assert.file(file));
     });
   });
 });
