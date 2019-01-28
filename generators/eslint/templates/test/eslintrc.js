@@ -2,11 +2,8 @@ module.exports = {
   plugins: [
     'mocha',
   ],
-  env: {
-    mocha: true,
-  },
-  rules: {
-  },
+  env: { mocha: true },
+  rules: {},
   overrides: [{
     files: ['spec_*.js'],
     rules: {

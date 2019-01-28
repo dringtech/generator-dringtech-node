@@ -1,7 +1,7 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  install () {
+  install() {
     this.npmInstall([
       'eslint',
       'eslint-config-standard',
@@ -13,7 +13,7 @@ module.exports = class extends Generator {
     ], { 'save-dev': true });
   };
 
-  setupEslint () {
+  setupEslint() {
     this.fs.copy(
       this.templatePath('eslintrc.js'),
       this.destinationPath('.eslintrc.js'),

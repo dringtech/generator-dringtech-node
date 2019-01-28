@@ -7,12 +7,12 @@ module.exports = {
   rules: {
     'semi': [ 'error', 'always' ],
     'comma-dangle': [ 'error', 'always-multiline' ],
-    'no-console': 'warning',
-    'space-before-function-paren': {
+    'no-console': 'warn',
+    'space-before-function-paren': [ 'error', {
       'anonymous': 'always',
       'named': 'never',
       'asyncArrow': 'always',
-    },
+    }],
     'object-curly-newline': [ 'error', { 'multiline': true } ],
   },
 };

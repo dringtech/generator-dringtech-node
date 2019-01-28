@@ -11,7 +11,7 @@ const packageScripts = {
 };
 
 module.exports = class extends Generator {
-  setupScripts () {
+  setupScripts() {
     const packageFile = this.destinationPath('package.json');
     let config = {};
     if (existsSync(packageFile)) {

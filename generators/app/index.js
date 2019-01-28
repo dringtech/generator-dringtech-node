@@ -1,7 +1,7 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  setupNyc () {
+  setupNyc() {
     this.npmInstall(['nyc'], { 'save-dev': true });
     this.fs.copyTpl(
       this.templatePath('nycrc'),
@@ -9,7 +9,7 @@ module.exports = class extends Generator {
     );
   }
 
-  setupMocha () {
+  setupMocha() {
     this.npmInstall([
       'mocha',
       'chai',
@@ -33,7 +33,7 @@ module.exports = class extends Generator {
     });
   }
 
-  setupGitignore () {
+  setupGitignore() {
     const file = this.destinationPath('.gitignore');
     const lines = require('./gitignore');
     const gitignore = this.fs.read(file).split(/\s+/);
