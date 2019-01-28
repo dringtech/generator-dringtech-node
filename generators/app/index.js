@@ -1,14 +1,6 @@
 const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
-  setupScripts () {
-    const packageFile = this.destinationPath('package.json');
-    const scripts = require('./package-scripts.js');
-    const config = this.fs.readJSON(packageFile);
-    config.scripts = Object.assign({}, config.scripts, scripts);
-    this.fs.write(packageFile, JSON.stringify(config, null, 2) + '\n');
-  }
-
   setupNyc () {
     this.npmInstall(['nyc'], { 'save-dev': true });
     this.fs.copyTpl(
