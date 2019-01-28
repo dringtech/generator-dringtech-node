@@ -1,0 +1,20 @@
+{
+  "lines": 90,
+  "statements": 90,
+  "functions": 90,
+  "branches": 90,
+  "exclude": [
+    "output/",
+    "coverage/",
+    "node_modules/",
+    "test/",
+    "gulpfile.js",
+    "public/javascript/",
+    "config/"
+  ],
+  "reporter": [
+    "lcov",
+    "cobertura",
+    "text-summary"
+  ]
+}

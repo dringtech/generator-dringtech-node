@@ -1,0 +1,9 @@
+{
+  "reporterEnabled": "xunit, mochawesome",
+  "xunitReporterOptions": {
+    "output": "output/xunit.xml"
+  },
+  "mochawesomeReporterOptions": {
+    "reportDir": "output/mochawesome"
+  }
+}
