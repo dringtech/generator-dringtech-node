@@ -13,7 +13,7 @@ module.exports = class extends Generator {
     ], { 'save-dev': true });
   };
 
-  setupEslint() {
+  configuring() {
     this.fs.copy(
       this.templatePath('eslintrc.js'),
       this.destinationPath('.eslintrc.js'),

@@ -14,7 +14,7 @@ module.exports = class extends Generator {
     ], { 'save-dev': true });
   }
 
-  setupMocha() {
+  configuring() {
     const files = [
       'test/mocha.opts',
       'test/reporter-config.json',
@@ -26,9 +26,6 @@ module.exports = class extends Generator {
         this.destinationPath(file),
       );
     });
-  }
-
-  setupNyc() {
     this.fs.copy(
       this.templatePath('nycrc'),
       this.destinationPath('.nycrc'),

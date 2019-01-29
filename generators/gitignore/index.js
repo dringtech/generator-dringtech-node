@@ -2,7 +2,7 @@ const Generator = require('yeoman-generator');
 const gitignoreLines = require('./gitignore');
 
 module.exports = class extends Generator {
-  setupGitignore() {
+  configuring() {
     const file = this.destinationPath('.gitignore');
     let gitignore = [];
     if (this.fs.exists(file)) {
