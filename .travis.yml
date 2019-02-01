@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - "lts/*"
+jobs:
+  include:
+    - script: npm run-script lint
+    - script: npm test
+    - script: npm run-script coverage
+    - script: npm audit
