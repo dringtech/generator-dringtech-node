@@ -1,6 +1,6 @@
 {
   "name": "generator-dringtech-node",
-  "version": "0.1.0",
+  "version": "0.1.0-0",
   "description": "Opinionated scaffolding for node projects. YMMV.",
   "license": "ISC",
   "files": [
