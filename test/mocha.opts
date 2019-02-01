@@ -1,4 +1,6 @@
 --require test/helpers/mochaSetup.js
+--async-only
+--slow 500
 test/**/spec*.js
 --reporter mocha-multi-reporters
 --reporter-options configFile=test/reporter-config.json
