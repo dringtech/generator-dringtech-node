@@ -1,11 +1,15 @@
 {
-  "name": "generator-dringtech-node",
+  "name": "@dringtech/generator-node",
   "version": "0.1.0-0",
   "description": "Opinionated scaffolding for node projects. YMMV.",
   "license": "ISC",
   "files": [
-    "generators"
+    "generators",
+    "!.eslintrc.js"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "yeoman-generator"
   ],
